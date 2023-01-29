@@ -1,0 +1,17 @@
+{
+	"name": "P1O1",
+	"plugin-id": "Text",
+	"sid": 782395986952913,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Opción1_1",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 853911062554359
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

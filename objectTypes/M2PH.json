@@ -1,0 +1,37 @@
+{
+	"name": "M2PH",
+	"plugin-id": "Sprite",
+	"sid": 189316221517280,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 144,
+						"height": 144,
+						"originX": 0.4583333333333333,
+						"originY": 0.5277777777777778,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8107432,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 600983844691860,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

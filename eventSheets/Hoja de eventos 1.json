@@ -1,0 +1,306 @@
+{
+	"name": "Hoja de eventos 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Puntuación",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 350920576990471
+		},
+		{
+			"eventType": "variable",
+			"name": "Vidas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 355146264347690
+		},
+		{
+			"eventType": "variable",
+			"name": "Dialogo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 151371121225550
+		},
+		{
+			"eventType": "variable",
+			"name": "OpcionCorrecta",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 108405856532831
+		},
+		{
+			"eventType": "variable",
+			"name": "Avanzar",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 859754247245252
+		},
+		{
+			"eventType": "comment",
+			"text": "DIÁLOGOS"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 463083653436371
+				}
+			],
+			"actions": [
+				{
+					"id": "typewriter-text",
+					"objectClass": "TextoDialogo",
+					"sid": 264329790528642,
+					"parameters": {
+						"text": "\"¡Hola! Soy Pici, asistente digital. \"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 288099602128119
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 810953893182129,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 449285226631632,
+					"parameters": {
+						"variable": "Avanzar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "TextoDialogo",
+					"sid": 992017221218101
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 997896426446680,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 115542320301047,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 303398076232372,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "TextoDialogo2",
+							"sid": 562127091046149,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 483978588775413,
+							"parameters": {
+								"text": "\"Hoy voy a ayudarte a montar tu primer PC mientras pones a prueba tus conocimientos. \"",
+								"duration": "1"
+							}
+						}
+					],
+					"sid": 962908831224717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 380829209635624,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 409069664833474,
+							"parameters": {
+								"text": "\"Esta es la caja de tu PC, y a la derecha encontrarás las distintas piezas.  \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PCPLACEHOLDER",
+							"sid": 137791707616856,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 788980278311864
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 810710739539449,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 592729154506405,
+							"parameters": {
+								"text": "\"Empecemos por algo sencillo. ¿Cuál es la primera pieza que se debe colocar? \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "P1O1",
+							"sid": 856274967621716,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "P1O2",
+							"sid": 191538083048611,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 327130071301475,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 927027980069678,
+									"parameters": {
+										"variable": "OpcionCorrecta"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 883086056028712,
+									"parameters": {
+										"variable": "Dialogo",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 888807022427565
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 688818202330296,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 854144219431353
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 601610017050673,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "P1O1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 428149831576962,
+					"parameters": {
+						"variable": "OpcionCorrecta",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 537031834886938
+		}
+	],
+	"sid": 934774258482528
+}
