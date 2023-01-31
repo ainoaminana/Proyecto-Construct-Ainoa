@@ -1,0 +1,45 @@
+{
+	"name": "BUTTONBIOS",
+	"plugin-id": "Sprite",
+	"sid": 390234965839277,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 106647599210593
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 211,
+						"height": 66,
+						"originX": 0.4786729857819905,
+						"originY": 0.4696969696969697,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5724413,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 561840048102772,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

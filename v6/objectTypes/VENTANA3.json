@@ -1,0 +1,37 @@
+{
+	"name": "VENTANA3",
+	"plugin-id": "Sprite",
+	"sid": 986258592269630,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 630,
+						"height": 456,
+						"originX": 0.5380952380952381,
+						"originY": 0.4605263157894737,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7322508,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 839080853449332,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

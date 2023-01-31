@@ -1,0 +1,37 @@
+{
+	"name": "BUSCADOR",
+	"plugin-id": "Sprite",
+	"sid": 398104110902452,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 268,
+						"height": 61,
+						"originX": 0.4626865671641791,
+						"originY": 0.4426229508196721,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5326089,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 344420241043546,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

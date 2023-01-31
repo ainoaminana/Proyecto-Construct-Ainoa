@@ -1,0 +1,45 @@
+{
+	"name": "BOTONITX",
+	"plugin-id": "Sprite",
+	"sid": 574521994489502,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 934243533829979
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 209,
+						"height": 68,
+						"originX": 0.5119617224880383,
+						"originY": 0.5147058823529411,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3930206,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 888118616440788,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

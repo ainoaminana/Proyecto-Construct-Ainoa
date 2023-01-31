@@ -1,0 +1,37 @@
+{
+	"name": "VENTANAPC",
+	"plugin-id": "Sprite",
+	"sid": 779487121074451,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 387,
+						"height": 387,
+						"originX": 0.46770025839793283,
+						"originY": 0.5012919896640827,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2661377,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 576107185093612,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

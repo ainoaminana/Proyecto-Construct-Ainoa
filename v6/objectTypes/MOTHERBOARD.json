@@ -1,0 +1,48 @@
+{
+	"name": "MOTHERBOARD",
+	"plugin-id": "Sprite",
+	"sid": 125081547503498,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 987838021116353
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 577262164515086
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 791,
+						"height": 806,
+						"originX": 0.5170670037926675,
+						"originY": 0.4851116625310174,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3514979,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 538080371177932,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

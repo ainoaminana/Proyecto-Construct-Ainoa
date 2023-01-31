@@ -1,0 +1,45 @@
+{
+	"name": "BOTONOPCA",
+	"plugin-id": "Sprite",
+	"sid": 792291032481513,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 232697976210174
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 210,
+						"height": 68,
+						"originX": 0.5238095238095238,
+						"originY": 0.47058823529411764,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3699468,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 471869218995614,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

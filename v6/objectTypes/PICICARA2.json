@@ -1,0 +1,67 @@
+{
+	"name": "PICICARA2",
+	"plugin-id": "Sprite",
+	"sid": 221914826500220,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 584725371021219
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 110,
+						"originX": 0.505,
+						"originY": 0.5181818181818182,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3924653,
+						"useCollisionPoly": true,
+						"duration": 0
+					},
+					{
+						"width": 200,
+						"height": 83,
+						"originX": 0.5,
+						"originY": 0.5060240963855421,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7619895,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 100,
+						"originX": 0.505,
+						"originY": 0.47,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 415969,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 350683028067982,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

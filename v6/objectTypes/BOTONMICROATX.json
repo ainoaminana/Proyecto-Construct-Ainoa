@@ -1,0 +1,45 @@
+{
+	"name": "BOTONMICROATX",
+	"plugin-id": "Sprite",
+	"sid": 524345177032510,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 616016220651559
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 217,
+						"height": 65,
+						"originX": 0.5207373271889401,
+						"originY": 0.5230769230769231,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 717870,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 842208076248252,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

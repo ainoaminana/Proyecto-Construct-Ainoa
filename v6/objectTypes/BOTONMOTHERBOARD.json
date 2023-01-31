@@ -1,0 +1,45 @@
+{
+	"name": "BOTONMOTHERBOARD",
+	"plugin-id": "Sprite",
+	"sid": 623079884066937,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 421204956706152
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 218,
+						"height": 68,
+						"originX": 0.5091743119266054,
+						"originY": 0.45588235294117646,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7411282,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 708658510072414,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

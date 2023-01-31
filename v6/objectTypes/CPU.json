@@ -1,0 +1,78 @@
+{
+	"name": "CPU",
+	"plugin-id": "Sprite",
+	"sid": 656192518582891,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 558871611655363
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 932073605965487
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 621299524291580
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 889473865946330
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 180,
+						"height": 177,
+						"originX": 0.5166666666666667,
+						"originY": 0.5141242937853108,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5398646,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 124823041888639,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

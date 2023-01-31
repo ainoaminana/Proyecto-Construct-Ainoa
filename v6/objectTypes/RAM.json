@@ -1,0 +1,53 @@
+{
+	"name": "RAM",
+	"plugin-id": "Sprite",
+	"sid": 379341719676282,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 465990377265531
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 860039085830402
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 628979508079727
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 472,
+						"height": 106,
+						"originX": 0.5063559322033898,
+						"originY": 0.4811320754716981,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7409423,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 443798413174468,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

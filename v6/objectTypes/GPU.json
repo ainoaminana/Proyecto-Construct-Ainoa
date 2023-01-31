@@ -1,0 +1,53 @@
+{
+	"name": "GPU",
+	"plugin-id": "Sprite",
+	"sid": 361887858264093,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 673772819935140
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 713013876379403
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 799235079724974
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 428,
+						"height": 177,
+						"originX": 0.4929906542056075,
+						"originY": 0.4915254237288136,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9932725,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 741515422009790,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
