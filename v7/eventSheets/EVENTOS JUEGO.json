@@ -1,0 +1,2682 @@
+{
+	"name": "EVENTOS JUEGO",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Puntuación",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 350920576990471
+		},
+		{
+			"eventType": "variable",
+			"name": "Vidas",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 355146264347690
+		},
+		{
+			"eventType": "variable",
+			"name": "Dialogo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 151371121225550
+		},
+		{
+			"eventType": "variable",
+			"name": "OpcionCorrecta1",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 108405856532831
+		},
+		{
+			"eventType": "variable",
+			"name": "OpcionCorrecta2",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 970817279223543
+		},
+		{
+			"eventType": "variable",
+			"name": "OpcionCorrecta3",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 647082897027512
+		},
+		{
+			"eventType": "variable",
+			"name": "OpcionCorrecta4",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 198891726707018
+		},
+		{
+			"eventType": "variable",
+			"name": "Avanzar",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 859754247245252
+		},
+		{
+			"eventType": "variable",
+			"name": "Fallo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 175431695558487
+		},
+		{
+			"eventType": "variable",
+			"name": "Ganado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 987473644364233
+		},
+		{
+			"eventType": "variable",
+			"name": "Perder",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 657384274211599
+		},
+		{
+			"eventType": "variable",
+			"name": "Reiniciar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 559265481343938
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 463083653436371
+				}
+			],
+			"actions": [
+				{
+					"id": "typewriter-text",
+					"objectClass": "TextoDialogo",
+					"sid": 264329790528642,
+					"parameters": {
+						"text": "\"¡Hola! Soy Pici, asistente digital. \"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 288099602128119
+		},
+		{
+			"eventType": "comment",
+			"text": "DIÁLOGOS",
+			"text-color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"background-color": [
+				0,
+				0.8352941176470589,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 810953893182129,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 449285226631632,
+					"parameters": {
+						"variable": "Avanzar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "TextoDialogo",
+					"sid": 992017221218101
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 997896426446680,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 115542320301047,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 303398076232372,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "TextoDialogo2",
+							"sid": 562127091046149,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 483978588775413,
+							"parameters": {
+								"text": "\"Hoy voy a ayudarte a montar tu primer PC mientras pones a prueba tus conocimientos. \"",
+								"duration": "1"
+							}
+						}
+					],
+					"sid": 962908831224717
+				},
+				{
+					"eventType": "comment",
+					"text": "HACER VISIBLES LA CAJA Y LAS PIEZAS"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 380829209635624,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 409069664833474,
+							"parameters": {
+								"text": "\"Esta es la caja de tu PC, y a la derecha encontrarás las distintas piezas.  \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CAJAPC",
+							"sid": 641838315547475,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "CAJAPC",
+							"sid": 283731669941309,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOTHERBOARD",
+							"sid": 548167627824958,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "MOTHERBOARD",
+							"sid": 401097061328511,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CPU",
+							"sid": 983684588717925,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "CPU",
+							"sid": 747883361957081,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DISIPADOR",
+							"sid": 262253393950146,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "DISIPADOR",
+							"sid": 539053539027441,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "GPU",
+							"sid": 814400515309263,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "GPU",
+							"sid": 953789494874942,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "HDD",
+							"sid": 421329893895461,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "HDD",
+							"sid": 785719956565889,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "M2",
+							"sid": 502682785624675,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "M2",
+							"sid": 383909678161130,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "RAM",
+							"sid": 400359748469745,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "RAM",
+							"sid": 585266004898496,
+							"behaviorType": "Desvanecer"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FALIM",
+							"sid": 490002973099186,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "FALIM",
+							"sid": 905833906663665,
+							"behaviorType": "Desvanecer"
+						}
+					],
+					"sid": 788980278311864
+				},
+				{
+					"eventType": "comment",
+					"text": "PRIMERA PREGUNTA"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 349494055508142,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 703877712452501,
+							"parameters": {
+								"text": "\"Empecemos por algo sencillo. ¿Cuál es la primera pieza que se debe colocar? \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONPROCESADOR1",
+							"sid": 292685952130161,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONPROCESADOR1",
+							"sid": 712312626069290,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONRAM",
+							"sid": 769340712923183,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONRAM",
+							"sid": 758075068288933,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONMOTHERBOARD",
+							"sid": 100441928583612,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 155081656487413,
+							"parameters": {
+								"variable": "Avanzar",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONMOTHERBOARD",
+							"sid": 709021692316150,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 951827692640998
+				},
+				{
+					"eventType": "comment",
+					"text": "OBSERVACIÓN/SOLUCIÓN: Como los botones permanecen activos en todo momento aunque no estén visibles en la escena, se ha añadido a cada uno de ellos un bool (\"OpcionActiva\") que permanece como falso hasta que el botón se vuelve visible. Si el bool está en falso no cuenta como que el botón está activo, por lo que se evitan problemas de superposición (como que una respuesta correcta sume puntos pero reste una vida, porque el botón siguiente que está en la misma posición es una opción incorrecta.)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 342394425432961,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 863794619500528,
+							"parameters": {
+								"text": "\"En cuanto a almacenamiento, ¿cuál de estas memorias pierde los datos que contiene al apagar el PC? \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONRAM2",
+							"sid": 683508484051324,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONRAM2",
+							"sid": 524179535623471,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONDISCODURO",
+							"sid": 458642389873640,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONDISCODURO",
+							"sid": 925451366903211,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONM2",
+							"sid": 508643217430547,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONM2",
+							"sid": 274889586545765,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 167835161582988,
+							"parameters": {
+								"variable": "Avanzar",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 952320511162748
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "PREGUNTAS OPCIONES 1 (PROCESADOR)",
+			"text-color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"background-color": [
+				0,
+				0.8352941176470589,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PROCESADOR",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 723672515372018,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BOTONPROCESADOR1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "BOTONPROCESADOR1",
+							"sid": 384986520782187,
+							"parameters": {
+								"instance-variable": "OpcionActiva"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 781749871347540,
+							"parameters": {
+								"variable": "OpcionCorrecta1",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 294410299789630
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 853949521753646,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BOTONRAM"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "BOTONRAM",
+							"sid": 803182239921880,
+							"parameters": {
+								"instance-variable": "OpcionActiva"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 493828134989762,
+							"parameters": {
+								"variable": "OpcionCorrecta1",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 670332202425884,
+							"parameters": {
+								"variable": "Fallo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PICICARA2",
+							"sid": 953348528120394,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 339297989234731,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PICICARA2",
+							"sid": 740966309020730,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 900996651947806
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 152123223018110,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BOTONMOTHERBOARD"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "BOTONMOTHERBOARD",
+							"sid": 832174545725134,
+							"parameters": {
+								"instance-variable": "OpcionActiva"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 879597955552746,
+							"parameters": {
+								"variable": "OpcionCorrecta1",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 983603487715806,
+							"parameters": {
+								"variable": "Fallo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PICICARA2",
+							"sid": 407608704100397,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 264661046480881,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PICICARA2",
+							"sid": 548338172828179,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 228632117465803
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 950949141106166,
+							"parameters": {
+								"variable": "OpcionCorrecta1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BOTONPROCESADOR1",
+							"sid": 465854601912292
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BOTONRAM",
+							"sid": 671388830756319
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BOTONMOTHERBOARD",
+							"sid": 644007503990212
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 464663329716352,
+							"parameters": {
+								"variable": "Dialogo",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 328838879688761,
+							"parameters": {
+								"variable": "Puntuación",
+								"value": "20"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 575453415099386,
+							"parameters": {
+								"variable": "OpcionCorrecta1",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 495405859295069,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 770748214420997,
+									"parameters": {
+										"variable": "Dialogo",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "TextoDialogo2",
+									"sid": 955932810895772,
+									"parameters": {
+										"text": "\"¡Exacto! Se trata del procesador. Colócalo en su sitio. \"",
+										"duration": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "CPU",
+									"sid": 971107820677540,
+									"behaviorType": "ArrastrarYSoltar",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 632044075323516
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "CPU",
+							"sid": 322426862782449,
+							"parameters": {
+								"object": "ObjVacioCPU"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "CPU",
+							"sid": 681361856714938,
+							"behaviorType": "Pegado",
+							"parameters": {
+								"pin-to": "ObjVacioCPU",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "CPU",
+							"sid": 302693424521933,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 447418934329747,
+							"parameters": {
+								"variable": "Dialogo",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ObjVacioCPU",
+							"sid": 444374983730567
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "DISIPADOR",
+							"sid": 235657409808384,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 472762798965856,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "ENTRADA TEXTO, DISIPADOR",
+							"text-color": [
+								1,
+								1,
+								1,
+								1
+							],
+							"background-color": [
+								0,
+								0.8352941176470589,
+								1,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 313249711315600,
+									"parameters": {
+										"variable": "Dialogo",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "TextoDialogo2",
+									"sid": 818776945137602,
+									"parameters": {
+										"text": "\"Un momento… Al procesador le falta algo, ¿no? ¿Qué es? \"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 309399600168503
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 145378687184226,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "DISIPADOR"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "DISIPADOR",
+							"sid": 740081830807091,
+							"parameters": {
+								"instance-variable": "OpcionActiva"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BUSCADOR",
+							"sid": 509760400731416,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "EntradaTextoDisipador",
+							"sid": 130333128016889,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 586666447784689,
+							"parameters": {
+								"variable": "Puntuación",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 632245930297763
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "EntradaTextoDisipador",
+							"sid": 334134518219940,
+							"parameters": {
+								"text": "\"Disipador\"",
+								"case": "case-insensitive"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BUSCADOR",
+							"sid": 170655455254440
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DISIPADOR",
+							"sid": 397235252527470,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "EntradaTextoDisipador",
+							"sid": 442716236643869
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 651682243003210,
+							"parameters": {
+								"variable": "Puntuación",
+								"value": "20"
+							}
+						}
+					],
+					"sid": 508667018910951
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "DISIPADOR",
+							"sid": 293658393882198,
+							"parameters": {
+								"object": "ObjVacioDis"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "DISIPADOR",
+							"sid": 190529141573842,
+							"behaviorType": "Pegado",
+							"parameters": {
+								"pin-to": "CPU",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DISIPADOR",
+							"sid": 208812575564997,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 128052913940467,
+							"parameters": {
+								"variable": "Dialogo",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 947499782331030,
+							"parameters": {
+								"variable": "Puntuación",
+								"value": "20"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ObjVacioDis",
+							"sid": 381332582212715
+						}
+					],
+					"sid": 870377725840818,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 310197045950020,
+									"parameters": {
+										"variable": "Dialogo",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "TextoDialogo2",
+									"sid": 120782798426282,
+									"parameters": {
+										"text": "\"¡Eso es! El procesador, o CPU, puede alcanzar unas temperaturas muy elevadas. Por eso necesita siempre un buen disipador. (¡No olvides aplicar la pasta térmica!) \"",
+										"duration": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 514473605294991,
+									"parameters": {
+										"variable": "Avanzar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 182546789066076
+						}
+					]
+				}
+			],
+			"sid": 906770913415159
+		},
+		{
+			"eventType": "comment",
+			"text": "PREGUNTAS OPCIONES 2 (RAM)",
+			"text-color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"background-color": [
+				0,
+				0.8352941176470589,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 212174476869228,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONRAM2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONRAM2",
+					"sid": 186934396986593,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 447146016327501,
+					"parameters": {
+						"variable": "OpcionCorrecta2",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 144292552149108
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 408699667237739,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONM2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONM2",
+					"sid": 510569927763740,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 147491915134193,
+					"parameters": {
+						"variable": "OpcionCorrecta2",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 287876001496148,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "PICICARA2",
+					"sid": 477288912849254,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 919052444083954,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "PICICARA2",
+					"sid": 253082679052485,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 995317500392461
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 222155266060024,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONDISCODURO"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONDISCODURO",
+					"sid": 106126033013443,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 547745048088547,
+					"parameters": {
+						"variable": "OpcionCorrecta2",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 189524606520839,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "PICICARA2",
+					"sid": 176558383530812,
+					"parameters": {
+						"frame-number": "2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 615041360250622,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "PICICARA2",
+					"sid": 455020673325261,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 811994011337227
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 174418279813305,
+					"parameters": {
+						"variable": "OpcionCorrecta2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BOTONRAM2",
+					"sid": 624764822381784
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BOTONM2",
+					"sid": 939761508687436
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BOTONDISCODURO",
+					"sid": 978099861263889
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 261261268876094,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 130826777882379,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 245478080358255,
+					"parameters": {
+						"variable": "OpcionCorrecta2",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 519866872042026,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 511775691254332,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-size",
+							"objectClass": "TextoDialogo2",
+							"sid": 508522993334559,
+							"parameters": {
+								"size-pt": "20"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 674126880513946,
+							"parameters": {
+								"text": "\"Pero entonces, ¿para qué sirve? ¿A) Extender temporalmente la memoria SSD, B) Apoyar al procesador o C) Almacenar datos de aplicaciones en uso para acceder con más rapidez?\"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONOPCA",
+							"sid": 407100909708562,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONOPCA",
+							"sid": 523629055749445,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONOPCIONB",
+							"sid": 945805002243879,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONOPCIONB",
+							"sid": 551582232635331,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONOPCIONC",
+							"sid": 108124770701872,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONOPCIONC",
+							"sid": 794805206874245,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 449865721154747
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "PREGUNTAS OPCIONES 3, FUNCIÓN RAM",
+			"text-color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"background-color": [
+				0,
+				0.8352941176470589,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 736510608848818,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONOPCIONC"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONOPCIONC",
+					"sid": 156184551883586,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 207624243184004,
+					"parameters": {
+						"variable": "OpcionCorrecta3",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 131990433675296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 469083064043769,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONOPCA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONOPCA",
+					"sid": 195191696394566,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 200694355769720,
+					"parameters": {
+						"variable": "OpcionCorrecta3",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 191691919207815,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 813585180593144
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 149819254165119,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONOPCIONB"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONOPCIONB",
+					"sid": 823165566476433,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 172671460229433,
+					"parameters": {
+						"variable": "OpcionCorrecta3",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 443453336779788,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 623425744331508
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 424972412058450,
+					"parameters": {
+						"variable": "OpcionCorrecta3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BOTONOPCA",
+					"sid": 728445591688952
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BOTONOPCIONB",
+					"sid": 255664244969736
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BOTONOPCIONC",
+					"sid": 208752424725409
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 806549671933316,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 180507690803423,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 298704487369166,
+					"parameters": {
+						"variable": "OpcionCorrecta3",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 574347457225162,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 511859127808779,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 430357746260255,
+							"parameters": {
+								"text": "\"¡Muy bien! Ahora colócala en su sitio.\"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "RAM",
+							"sid": 668185277125824,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 716548544289059
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "RAM",
+					"sid": 275200968785551,
+					"parameters": {
+						"object": "ObjVacioRAM"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "RAM",
+					"sid": 962944614564548,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "MOTHERBOARD",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "RAM",
+					"sid": 924104370389658,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 283645938206133,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 686053285566887,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ObjVacioRAM",
+					"sid": 127054746616388
+				}
+			],
+			"sid": 900115503296676,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 326073884264770,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 174088016345938,
+							"parameters": {
+								"text": "\"Nos quedan dos tipos de almacenamiento: las memorias no volátiles. De las opciones, escoge la más rápida: \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONDMECANICOS",
+							"sid": 213733018588478,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONDMECANICOS",
+							"sid": 362533183338750,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONSSD",
+							"sid": 713441932091017,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONSSD",
+							"sid": 991823644857123,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BOTONM2_2",
+							"sid": 614322971401251,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BOTONM2_2",
+							"sid": 349393728990645,
+							"parameters": {
+								"instance-variable": "OpcionActiva",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 672679531083528
+				},
+				{
+					"eventType": "comment",
+					"text": "PREGUNTAS OPCIONES 4, M.2",
+					"text-color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"background-color": [
+						0,
+						0.8352941176470589,
+						1,
+						1
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 433324697315427,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONM2_2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONM2_2",
+					"sid": 963188315258236,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 586464033042602,
+					"parameters": {
+						"variable": "OpcionCorrecta4",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 491850863034654
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 758999667267860,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONSSD"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONSSD",
+					"sid": 358919924919969,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 197864286533460,
+					"parameters": {
+						"variable": "OpcionCorrecta4",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 991481312354445,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 295214780579668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 863209976245067,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONDMECANICOS"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BOTONOPCIONB",
+					"sid": 252718862275140,
+					"parameters": {
+						"instance-variable": "OpcionActiva"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 106939302444714,
+					"parameters": {
+						"variable": "OpcionCorrecta4",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 431282610252206,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 677239034197432
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 810523080555174,
+					"parameters": {
+						"variable": "OpcionCorrecta4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BOTONM2_2",
+					"sid": 761611261329193
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BOTONSSD",
+					"sid": 749040786440757
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BOTONDMECANICOS",
+					"sid": 944280728155929
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 485526889983860,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 863854281180392,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 946497159607582,
+					"parameters": {
+						"variable": "OpcionCorrecta4",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 707393946180126,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 708768812348166,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 732609983272716,
+							"parameters": {
+								"text": "\"Esa es. Ahora colócala en su sitio.\"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "M2",
+							"sid": 402728649981932,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 463482289475750
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "M2",
+					"sid": 561391662124367,
+					"parameters": {
+						"object": "ObjVacioM2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "M2",
+					"sid": 987807369642771,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "MOTHERBOARD",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "M2",
+					"sid": 766315904483727,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 878140521133742,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 578555296765507,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ObjVacioM2",
+					"sid": 353575144939019
+				}
+			],
+			"sid": 619018192094718,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 144111115373634,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 458304969411157,
+							"parameters": {
+								"text": "\"Otra pieza importantísima de un PC es la siguiente. Se encarga de procesar todos los datos gráficos para quitar carga a la CPU y trabaja en sintonía con esta. Escógela y colócala en su sitio. \"",
+								"duration": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "GPU",
+							"sid": 166321486198268,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 600592536066790
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "GPU",
+					"sid": 146330483623594,
+					"parameters": {
+						"object": "ObjVacioGPU"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "GPU",
+					"sid": 327784895832425,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "MOTHERBOARD",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "GPU",
+					"sid": 846055173913047,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 644186065481625,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 668435274735644,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ObjVacioGPU",
+					"sid": 391708082922203
+				}
+			],
+			"sid": 416119619020420,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 544879872447034,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "13"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 630807072125719,
+							"parameters": {
+								"text": "\"Además de la memoria M.2, mucha gente añade también un disco mecánico a su PC. ¿Por qué no lo añades al tuyo también? A pesar de su lentitud, su capacidad de almacenaje supera a las demás y son mucho más baratos. \"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "HDD",
+							"sid": 788511100191119,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 376021343392752
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "HDD",
+					"sid": 911332708352895,
+					"parameters": {
+						"object": "ObjVacioHDD"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "HDD",
+					"sid": 340861669710380,
+					"behaviorType": "Pegado",
+					"parameters": {
+						"pin-to": "CAJAPC",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "HDD",
+					"sid": 237673251908806,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 708996918783449,
+					"parameters": {
+						"variable": "Dialogo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 669486514720329,
+					"parameters": {
+						"variable": "Puntuación",
+						"value": "20"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ObjVacioHDD",
+					"sid": 959446180305997
+				}
+			],
+			"sid": 288876921223384,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 281665866043422,
+							"parameters": {
+								"variable": "Dialogo",
+								"comparison": 0,
+								"value": "14"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-text",
+							"objectClass": "TextoDialogo2",
+							"sid": 916373921574872,
+							"parameters": {
+								"text": "\"¡Ya tienes tu PC! Recuerda comprobar que la fuente de alimentación sea capaz de sustentar energía a todas las piezas.\"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 319403485249487,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 837038748409115,
+							"parameters": {
+								"variable": "Ganado",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 835810357936546
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "HACER VISIBLES LAS VARIABLES \"VIDAS\" Y \"PUNTUACIÓN\" EN EL JUEGO",
+			"text-color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"background-color": [
+				0,
+				0.8352941176470589,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 752647711055930,
+					"parameters": {
+						"variable": "Fallo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 712087724599908,
+					"parameters": {
+						"variable": "Vidas",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 300591677598321,
+					"parameters": {
+						"variable": "Fallo",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 435182812611927
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 770960481390651
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "VIDAS",
+					"sid": 929776046614853,
+					"parameters": {
+						"text": "Vidas"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "PUNTUACIÓN",
+					"sid": 339816779294338,
+					"parameters": {
+						"text": "Puntuación"
+					}
+				}
+			],
+			"sid": 453245578824966
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 496023426043902,
+					"parameters": {
+						"variable": "Ganado"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 528683156789277,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 122713282839219,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextoGanar",
+					"sid": 839125351772500,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextoGanar2",
+					"sid": 252419904923817,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 840799769535583
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 712204715487946,
+					"parameters": {
+						"variable": "Vidas",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 137733448707421,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 743165091421349,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextoPerder",
+					"sid": 625678991721482,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextoPerder2",
+					"sid": 553494795378960,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BOTONNO",
+					"sid": 388058624474219,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BOTONSI",
+					"sid": 703841160142816,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 490118934762337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 891005808721488,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONSI"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 256679457106628,
+					"parameters": {
+						"layout": "MENU PRINCIPAL"
+					}
+				}
+			],
+			"sid": 409050933224133
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 391355964824470,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BOTONNO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 884189361443245,
+					"parameters": {
+						"layout": "MENU PRINCIPAL"
+					}
+				}
+			],
+			"sid": 600371786642245
+		}
+	],
+	"sid": 934774258482528
+}

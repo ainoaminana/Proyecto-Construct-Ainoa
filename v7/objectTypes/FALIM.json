@@ -1,0 +1,53 @@
+{
+	"name": "FALIM",
+	"plugin-id": "Sprite",
+	"sid": 634425116842728,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 782182479349266
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 811988197011432
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 833469899427523
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 261,
+						"height": 260,
+						"originX": 0.45977011494252873,
+						"originY": 0.5076923076923077,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3232967,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 148193450204721,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"name": "BOTONDISCODURO",
+	"plugin-id": "Sprite",
+	"sid": 187550095229547,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 172336618650371
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 218,
+						"height": 71,
+						"originX": 0.518348623853211,
+						"originY": 0.5211267605633803,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2733214,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 284741083238535,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

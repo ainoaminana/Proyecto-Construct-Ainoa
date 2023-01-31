@@ -1,0 +1,45 @@
+{
+	"name": "BOTONDMECANICOS",
+	"plugin-id": "Sprite",
+	"sid": 668820273954497,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 823625360004014
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 211,
+						"height": 66,
+						"originX": 0.5213270142180095,
+						"originY": 0.5151515151515151,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8821679,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 646675614207227,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

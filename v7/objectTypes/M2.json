@@ -1,0 +1,53 @@
+{
+	"name": "M2",
+	"plugin-id": "Sprite",
+	"sid": 189316221517280,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 793384775804840
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 382136869112804
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 365083433441549
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 323,
+						"height": 81,
+						"originX": 0.5046439628482973,
+						"originY": 0.4691358024691358,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6249116,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 600983844691860,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

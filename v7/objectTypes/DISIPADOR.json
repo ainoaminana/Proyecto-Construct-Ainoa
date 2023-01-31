@@ -1,0 +1,61 @@
+{
+	"name": "DISIPADOR",
+	"plugin-id": "Sprite",
+	"sid": 416640168024166,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 239567284764544
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastrarYSoltar",
+			"sid": 233945846561499
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pegado",
+			"sid": 687297219877128
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Desvanecer",
+			"sid": 409747523556901
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 258,
+						"height": 263,
+						"originX": 0.5038759689922481,
+						"originY": 0.5171102661596958,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9974820,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 562917060106577,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "EVENTOS MENU PRINCIPAL",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "AÑADIR SONIDO GENERAL"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 373285928272244,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "CARPETA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 444217703412311,
+					"parameters": {
+						"layout": "JUEGO"
+					}
+				}
+			],
+			"sid": 394644257942948,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "AÑADIR SONIDO AL CLICAR"
+				}
+			]
+		}
+	],
+	"sid": 576672858197620
+}

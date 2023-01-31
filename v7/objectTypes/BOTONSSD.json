@@ -1,0 +1,45 @@
+{
+	"name": "BOTONSSD",
+	"plugin-id": "Sprite",
+	"sid": 327065463947213,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 635145396722371
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 212,
+						"height": 67,
+						"originX": 0.49528301886792453,
+						"originY": 0.417910447761194,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5666024,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 214210954991825,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

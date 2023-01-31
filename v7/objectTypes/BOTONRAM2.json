@@ -1,0 +1,45 @@
+{
+	"name": "BOTONRAM2",
+	"plugin-id": "Sprite",
+	"sid": 458740883327158,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OpcionActiva",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 627620956288846
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 218,
+						"height": 75,
+						"originX": 0.46788990825688076,
+						"originY": 0.5066666666666667,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6219831,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 736452874737463,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
